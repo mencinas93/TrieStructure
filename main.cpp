@@ -5,7 +5,9 @@
 #include <vector>
 using namespace std;
 #include <unistd.h> // for getcwd()
+#include "search.hpp"
 
+/*
 //const int Alphabet_Size = 26;
 const int ASCII_Size = 128;
 
@@ -44,18 +46,6 @@ void insert(struct TrieNode *Treeroot, string key) {
     }
     pTraverse->EndOfWord = true;
 }
-/*
-void insert(struct TrieNode *Treeroot, string key){
-    struct TrieNode *pTraverse = Treeroot;
-    for (int i = 0; i < key.length(); i++){
-        int index = key[i] - 'a';
-        if (!pTraverse-> children[index])
-            pTraverse->children[index] = getNode();
-        pTraverse = pTraverse-> children[index];
-    }
-    pTraverse->EndOfWord = true;
-}
-*/
 bool search(struct TrieNode *TreeRoot, string key)
 {
     struct TrieNode *pTraverse = TreeRoot;
@@ -68,7 +58,7 @@ bool search(struct TrieNode *TreeRoot, string key)
     return (pTraverse-> EndOfWord);
 }
 
-
+*/
 
 
 int main(){
@@ -105,8 +95,10 @@ int main(){
                 cout << "The word '" << search_word << "' is present!'" << endl;
                 multipleFound = true;
             }
+          
             found = true;
         }
+        
     }
     /*
     while (getline(iFile, line))
@@ -134,8 +126,14 @@ int main(){
   //    } else {
   //        cout << "The word '" << search_word << "' is not present in the Trie.\n";
   //    }
+    string Search_Inquiry;
+    //int comparison = printAutoSuggestions(TreeRoot, Search_Inquiry);
+    cout << "Please type in the word you are searching for " << endl;
+    cin >> Search_Inquiry;
+    printAutoSuggestions(TreeRoot, Search_Inquiry);
     
-cout << "Hi" << endl;
+    
+    
     
 
       return 0;
