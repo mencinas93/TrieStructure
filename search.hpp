@@ -1,9 +1,3 @@
-//
-//  Search.hpp
-//  ProjectMain
-//
-//  Created by Michael Encinas on 2/21/23.
-//
 
 #ifndef search_hpp
 #define search_hpp
@@ -23,7 +17,7 @@ void suggestionsRec(struct TrieNode* root,
 bool isLastNode(struct TrieNode* Treeroot);
 
 
-#endif /* Search_hpp */
+#endif 
 
 
 
